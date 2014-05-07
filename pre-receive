@@ -4,6 +4,8 @@
 #Exit 1 if connection lost, else exit 0
 
 DOWN="State: Peer in Cluster (Disconnected)"
+
+#There might me some user access issues with this part: possible solutions are su- or ssh as another user
 STATUS=$(sudo gluster peer status | grep "$DOWN" -m 1)
 
 if [[ $STATUS == "$DOWN" ]]; then
