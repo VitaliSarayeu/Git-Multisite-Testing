@@ -18,5 +18,9 @@ do
   git add TEST.txt
   git commit -m "added TEST.txt"
   git push origin master
+  git branch test1
+  git branch test2
+  git push origin test1
+  git push origin test2
   cd ..
 done
